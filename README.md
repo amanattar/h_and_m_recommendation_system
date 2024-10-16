@@ -57,10 +57,10 @@ cd src/api
 python app.py
 ```
 
-This will start the Flask API on `http://127.0.0.1:5000`. If you want to use a different port:
+This will start the Flask API on `http://127.0.0.1:5005`. If you want to use a different port:
 
 ```bash
-python app.py --port 5001
+python app.py 
 ```
 
 ### Step 5: Run the Streamlit Frontend
@@ -86,7 +86,7 @@ The Flask API exposes a `/recommend` endpoint to generate recommendations. You c
 ### Example:
 
 ```bash
-curl -X POST http://127.0.0.1:5000/recommend \
+curl -X POST http://127.0.0.1:5005/recommend \
     -H "Content-Type: application/json" \
     -d '{"customer_id": "000659db9979238065fe1f032cd87839b9a6ccf97d404f8513d6279281bda7e0", "article_id": "123456"}'
 ```
@@ -126,16 +126,3 @@ License
 -------
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-
-
-### **Summary of Key Instructions**:
-
-1. Clone the repository.
-2. Install dependencies using `pip install -r requirements.txt`.
-3. Download and extract the dataset from Kaggle and place it in the `data/data/` directory.
-4. Run the Flask backend (`app.py`) and the Streamlit frontend (`streamlit_app.py`).
-5. Test the recommendation system by sending requests via the API or using the Streamlit interface.
-
-Let me know if you need any additional help or modifications!
-```
